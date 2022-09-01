@@ -9,7 +9,9 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    let colors: [UIColor] = [.green, .orange, .gray, .blue, .systemPurple, .brown]
+    var colors: [UIColor] {
+        return [.green, .orange, .gray, .blue, .systemPurple, .brown]
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,8 +26,7 @@ class ViewController: UIViewController {
     func buttonPressed(sender: UIButton) {
         let randomColor = colors[Int.random(in: 0..<colors.count)]
         view.backgroundColor = randomColor
-        print("")
-        sender.setTitle(randomColor.accessibilityName, for: .normal)
+        sender.setTitle(randomColor.accessibilityName, for: .normal) // comment
     }
 }
 
