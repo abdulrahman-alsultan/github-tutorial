@@ -10,7 +10,8 @@ import UIKit
 class ViewController: UIViewController {
     
     var colors: [UIColor] {
-        return [.green, .orange, .gray, .blue, .systemPurple, .brown]
+        let colors: [UIColor] = [.green, .orange, .gray, .blue, .systemPurple, .brown]
+        return colors
     }
 
     override func viewDidLoad() {
