@@ -8,6 +8,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    let colors: [UIColor] = [.green, .orange, .gray, .blue, .systemPurple, .brown]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,8 +17,8 @@ class ViewController: UIViewController {
     }
 
     @IBAction func printInfo(_ sender: Any) {
-        print("Name: Abdulrahman")
-        print("")
+        let randomColor = colors[Int.random(in: 0..<colors.count)]
+        view.backgroundColor = randomColor
     }
 }
 
