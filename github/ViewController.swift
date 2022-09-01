@@ -16,9 +16,11 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    @IBAction func printInfo(_ sender: Any) {
+    
+    @IBAction func printInfo(_ sender: UIButton) {
         let randomColor = colors[Int.random(in: 0..<colors.count)]
         view.backgroundColor = randomColor
+        sender.setTitle(randomColor.accessibilityName, for: .normal)
     }
 }
 
