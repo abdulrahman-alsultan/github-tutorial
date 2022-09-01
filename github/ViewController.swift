@@ -24,6 +24,7 @@ class ViewController: UIViewController {
     func buttonPressed(sender: UIButton) {
         let randomColor = colors[Int.random(in: 0..<colors.count)]
         view.backgroundColor = randomColor
+        print("")
         sender.setTitle(randomColor.accessibilityName, for: .normal)
     }
 }
